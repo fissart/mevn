@@ -5,12 +5,44 @@
 </template>
 
 <script type="text/javascript">
+
+import axios from 'axios';
+
 export default {
-  name: 'HomeView',
-  mounted(){
-    localStorage.removeItem('YourItem')
-    console.log(localStorage.getItem('YourItem'));
-    
-  }
+  data() {
+    return {
+      curse: [],
+      getcurseupdate: [],
+      wwwww: 'wzwzw',
+    };
+  },
+
+  mounted() {
+    this.getCurse();
+  },
+
+  methods: {
+    errase(user) {
+      console.log(user);
+    },
+
+    update(user) {
+      console.log(user);
+    },
+
+    getupdate(user) {
+      axios
+        .get(`http://169.197.183.233:3000/api/curses/Controller/${user}`)
+        .then(responce => console.log(responce.data))
+        .catch(e => console.log(e));
+    },
+
+    getCurse() {
+      axios
+        .get('http://169.197.183.233:3000/api/curses/Controller')
+        .then(responce => this.curse = responce.data)
+        .catch(e => console.log(e));
+    },
+  },
 }
 </script>

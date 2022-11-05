@@ -12,3 +12,4 @@ mongoose.connect('mongodb://localhost/new', { useNewUrlParser: true }, (err, res
 		console.log('ok');
 	});
 });
+//https://www.youtube.com/watch?v=fkMgBPLNJUM
