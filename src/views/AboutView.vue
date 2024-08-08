@@ -32,14 +32,14 @@ export default {
 
     getupdate(user) {
       axios
-        .get(`http://169.197.183.233:3000/api/curses/Controller/${user}`)
+        .get(`https://www.esfapa.edu.pe:9797/api/curses/Controller/${user}`)
         .then(responce => console.log(responce.data))
         .catch(e => console.log(e));
     },
 
     getCurse() {
       axios
-        .get('http://169.197.183.233:3000/api/curses/Controller')
+        .get('https://www.esfapa.edu.pe:9797/api/curses/Controller')
         .then(responce => this.curse = responce.data)
         .catch(e => console.log(e));
     },
