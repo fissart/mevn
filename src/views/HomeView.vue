@@ -1,6 +1,6 @@
 <template>
 	<div class="bg-info">
-		<img class="img w-100" src="../assets/negzw.jpg">
+		<!-- <img class="img w-100" src="../assets/negzw.jpg"> -->
 		<HelloWorld msg="wwwWelcome to Your Vue.js App New" www1="hellow" />
 	</div>
 </template>
